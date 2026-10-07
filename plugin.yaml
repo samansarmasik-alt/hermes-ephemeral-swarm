@@ -1,0 +1,25 @@
+name: ephemeral-swarm
+version: 0.1.0
+manifest_version: 2
+api_version: 1
+requires_hermes: ">=0.21.5"
+description: Temporary hierarchical subagent teams with queued work and ancestry-scoped rooms.
+homepage: https://github.com/samansarmasik-alt/hermes-ephemeral-swarm
+config_schema:
+  parallel_window:
+    type: int
+    default: 8
+    description: Maximum simultaneous root workers for this swarm (1-8; Hermes lifecycle capacity is 8).
+provides_tools:
+  - swarm_start
+  - swarm_invite
+  - swarm_room
+  - swarm_message
+  - swarm_inbox
+  - swarm_status
+  - swarm_wait
+  - swarm_close
+tags:
+  - agents
+  - orchestration
+  - temporary
